@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "museo-sans 100";
+    src: url(../../fonts/museosans-100-webfont.ttf);
+}
+
+@font-face {
+    font-family: "museo-sans 300";
+    src: url(../../fonts/museosans-300-webfont.ttf);
+}
+
+@font-face {
+    font-family: "museo-sans 500";
+    src: url(../../fonts/museosans_500-webfont.ttf);
+}
+
+@font-face {
+    font-family: "museo-sans 700";
+    src: url(../../fonts/museosans_700-webfont.ttf);
+}
+
+@font-face {
+    font-family: "museo-sans 900";
+    src: url(../../fonts/museosans_900-webfont.ttf);
+}
+
+body {
+    font-family: "museo-sans 300", sans-serif;
+}
+
+.heading-tertiary {
+    color: $color-white;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+    display: block;
+    font-size: 5rem;
+    font-family: "museo-sans 100", sans-serif;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    line-height: 6rem;
+
+    @include respond(tab-port) {
+        width: 75rem;
+        font-size: 5.5rem;
+    }
+
+    @include respond(phone) {
+        width: 40rem;
+        font-size: 3.1rem;
+        line-height: 4rem;
+        margin-bottom: 1.9rem;
+    }
+    
+}
+
+.heading-primary {
+    font-size: 3.5rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+
+.paragraph-primary {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    &__link {
+        text-decoration: none;
+        color: $color-primery;
+    }
+}
+
+.heading-secondary {
+    font-size: 2.1rem;
+    font-weight: 100;
+    margin: 3rem 0;
+}
+
+.paragraph-secondary {
+    font-size: 1.3rem;
+    line-height: 2rem;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.slider {
+    color: $color-white;
+    backface-visibility: hidden;
+
+    &__paragraph {
+       line-height: 2.3rem;
+       font-size: 1.4rem;
+       display: block;
+
+       @include respond(phone) {
+        display: none;
+       }
+    }
+
+}
+
+.heading-slider {
+    font-family: "museo-sans 100", sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+    backface-visibility: hidden;
+
+    @include respond(tab-port) {
+       font-size: 3.5rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.7rem;
+        margin: auto;
+        max-width: 30rem;
+    }
+}
+
+.heading-news {
+    font-family: "museo-sans 100", sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    color: $color-primery-dark;
+}
+
+
+

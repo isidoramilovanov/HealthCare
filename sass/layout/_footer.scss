@@ -1,0 +1,43 @@
+.footer {
+    height: 6rem;
+    background-color: $color-gray-light;
+    border-top: 1px solid $color-gray-medium-light;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__copyright {
+        @include respond(tab-port) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-primery;
+    }
+
+    @include respond(tab-port) {
+        justify-content: space-between;
+        margin-top: 10rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 7rem;
+    }
+}
+
+.copy {
+    color: $color-gray-medium;
+
+    @include respond(tab-port) {
+        margin-left: 1.5rem;
+    }
+}
+
+.media a {
+    font-size: 2.3rem;
+    color: $color-gray-medium;
+    margin-right: 1.2rem;
+}

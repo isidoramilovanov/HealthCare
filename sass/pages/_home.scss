@@ -1,0 +1,124 @@
+.hero {
+    height: 70rem;
+    background-image: linear-gradient(to right bottom,
+        rgba($color-primery-dark, 0.45),
+        rgba($color-primery-dark, 0.45)),
+        url(../img/home.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    &__text-box {
+        @media only screen and(min-width: 900px) {
+            width: 70rem;
+        }
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    @include respond(tab-port) {
+        height: 55rem;
+    }
+
+    @include respond(phone) {
+        height: 30rem;
+    }
+
+}
+
+.section-about {
+    color: $color-primery-dark;
+    padding: 10rem 15rem;
+
+    @include respond(tab-port) {
+        padding: 4rem 2rem;
+    }
+
+    @include respond(phone) {
+        padding: 4rem 3rem;
+    }
+}
+
+.description {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.list {
+    max-width: 53rem;
+    margin-top: 2rem;
+    list-style: none;
+
+
+    &__item {
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include respond(tab-port) {
+            line-height: 2.5rem;
+        }
+    }
+
+    &__item::before {
+        content: '';
+        display: inline-block;
+        height: .8rem;
+        width: .8rem;
+        margin-right: .7rem;
+
+        // Older browsers
+        background-image: url(../img/empty-circle.svg);
+        background-size: cover;
+
+
+        // Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: $color-primery-dark;
+            -webkit-mask-image: url(../img/empty-circle.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/empty-circle.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 120rem;
+    }
+}
+
+.section-news {
+    padding: 10rem 20rem;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 6rem 3rem;
+    }
+
+    .see-all-media {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        @include respond(tab-port) {
+            margin-top: 7rem;
+        }
+        @include respond(phone) {
+           margin-top: 5rem;
+        }
+    }
+
+    @include respond(phone) {
+        padding: 6rem 4rem;
+    }
+}
